@@ -1,19 +1,21 @@
 <!-- Start: User Info Page  -->
-<div class="form-container">
 
-    <!-- Form Title  -->
-    <div class="form-title">
-        <h1 class="text-primary"> Pick app-ons </h1>
-        <span class="sub-title"> Add-ons help enhance your gaming experience. </span>
-    </div>
+<form [formGroup]="onsGroup" (ngSubmit)="onSubmit()" class="h-100 d-flex justify-content-between flex-column">
+    <div>
 
-    <!-- Form  -->
-    <form [formGroup]="onsGroup" (ngSubmit)="onSubmit()">
+        <!-- Form Title  -->
+        <div class="form-title">
+            <h1 class="text-primary"> Pick app-ons </h1>
+            <span class="sub-title"> Add-ons help enhance your gaming experience. </span>
+        </div>
+
+        <!-- Form  -->
         <div class="my-3">
-            <label for="online" class="d-flex align-items-center justify-content-between p-4 rounded-4 border" role="button"
-                [ngClass]="{'border-primary' : onsGroup.value.online}">
+            <label for="online" class="d-flex align-items-center justify-content-between p-4 rounded-4 border"
+                role="button" [ngClass]="{'border-primary' : onsGroup.value.online}">
                 <div class="d-flex align-items-center">
-                    <input type="checkbox" name="online" id="online" value="online" class="form-check-input" formControlName="online">
+                    <input type="checkbox" name="online" id="online" value="online" class="form-check-input"
+                        formControlName="online">
                     <div class="d-flex flex-column ps-4">
                         <span class="text-primary"> Online Service </span>
                         <span class="sub-title"> Access to multiplayer games </span>
@@ -23,10 +25,11 @@
             </label>
         </div>
         <div class="my-3">
-            <label for="storage" class="d-flex align-items-center justify-content-between p-4 rounded-4 border" role="button"
-                [ngClass]="{'border-primary' : onsGroup.value.storage}">
+            <label for="storage" class="d-flex align-items-center justify-content-between p-4 rounded-4 border"
+                role="button" [ngClass]="{'border-primary' : onsGroup.value.storage}">
                 <div class="d-flex align-items-center">
-                    <input type="checkbox" name="storage" id="storage" value="storage" class="form-check-input" formControlName="storage">
+                    <input type="checkbox" name="storage" id="storage" value="storage" class="form-check-input"
+                        formControlName="storage">
                     <div class="d-flex flex-column ps-4">
                         <span class="text-primary"> Larger storage </span>
                         <span class="sub-title"> Extra 1TB of cloud save </span>
@@ -36,10 +39,11 @@
             </label>
         </div>
         <div class="my-3">
-            <label for="profile" class="d-flex align-items-center justify-content-between p-4 rounded-4 border" role="button"
-                [ngClass]="{'border-primary' : onsGroup.value.profile}">
+            <label for="profile" class="d-flex align-items-center justify-content-between p-4 rounded-4 border"
+                role="button" [ngClass]="{'border-primary' : onsGroup.value.profile}">
                 <div class="d-flex align-items-center">
-                    <input type="checkbox" name="profile" id="profile" value="profile" class="form-check-input" formControlName="profile">
+                    <input type="checkbox" name="profile" id="profile" value="profile" class="form-check-input"
+                        formControlName="profile">
                     <div class="d-flex flex-column ps-4">
                         <span class="text-primary"> Customizable Profile </span>
                         <span class="sub-title"> Custom theme on your profile </span>
@@ -48,10 +52,10 @@
                 <span class="text-secondary"> {{duration ? '$20/yr' : '+$2/mo'}} </span>
             </label>
         </div>
-        <div class="d-flex justify-content-between pt-5">
-            <span class="text-muted fw-semibold" role="button" (click)="onBack()">Go Back </span>
-            <button class="btn btn-primary btn-sm" type="submit" [disabled]="onCheck()"> Next Step </button>
-        </div>
-    </form>
-</div>
+    </div>
+    <div class="d-flex justify-content-between pt-5">
+        <span class="text-muted fw-semibold" role="button" (click)="onBack()">Go Back </span>
+        <button class="btn btn-primary" type="submit" [disabled]="onCheck()"> Next Step </button>
+    </div>
+</form>
 <!-- End: User Info Page  -->

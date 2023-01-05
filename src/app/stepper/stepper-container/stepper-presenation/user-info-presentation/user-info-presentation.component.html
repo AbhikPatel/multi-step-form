@@ -1,9 +1,8 @@
 <!-- Start: User Info Page  -->
-<div class="form-container">
-
-    <form class="h-100" [formGroup]="infoGroup" (ngSubmit)="onSubmit()">
+<form class=" d-flex flex-column justify-content-between h-100" [formGroup]="infoGroup" (ngSubmit)="onSubmit()">
+    <div>
         <!-- Form Title  -->
-        <div class="form-title">
+        <div class="form-title pb-5">
             <h1 class="text-primary"> Personal Info </h1>
             <span class="sub-title"> Please provide your name, email address and phone number. </span>
         </div>
@@ -11,7 +10,7 @@
         <!-- Form  -->
 
         <!-- Name Field  -->
-        <div class="">
+        <div class="mb-3">
             <div class="d-flex justify-content-between">
                 <label for="fullName" class="form-label"> Name </label>
                 <span class="text-danger fw-bold" *ngIf="getControls['fullName']?.errors?.['required'] 
@@ -23,7 +22,7 @@
         </div>
 
         <!-- Email Addess Feild  -->
-        <div class="">
+        <div class="mb-3">
             <div class="d-flex justify-content-between">
                 <label for="mail" class="form-label"> Email Address </label>
                 <span class="text-danger fw-bold" *ngIf="getControls['mail']?.errors?.['required'] 
@@ -35,7 +34,7 @@
         </div>
 
         <!-- Phone Number Field  -->
-        <div class="">
+        <div class="mb-3">
             <div class="d-flex justify-content-between">
                 <label for="phone" class="form-label"> Phone Number </label>
                 <span class="text-danger fw-bold" *ngIf="getControls['phone']?.errors?.['required'] 
@@ -46,10 +45,11 @@
                 formControlName="phone" placeholder="eg. 9856324712">
         </div>
 
-        <!-- Buttons Functionality  -->
-        <div class="py-5 d-flex justify-content-end">
-            <button class="btn btn-primary" type="submit"> Next Step </button>
-        </div>
-    </form>
-</div>
+
+    </div>
+    <!-- Buttons Functionality  -->
+    <div class="d-flex justify-content-end">
+        <button class="btn btn-primary" type="submit"> Next Step </button>
+    </div>
+</form>
 <!-- End: User Info Page  -->

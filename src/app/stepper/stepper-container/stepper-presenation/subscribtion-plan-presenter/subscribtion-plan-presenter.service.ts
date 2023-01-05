@@ -25,19 +25,19 @@ export class SubscribtionPlanPresenterService {
 
   public SubscribtionData = [
     {
-      icon: '../../../../../assets/images/icon-arcade.svg',
+      icon: 'assets/images/icon-arcade.svg',
       title: 'Arcade',
       price: '$9/mo',
       value: 9
     },
     {
-      icon: '../../../../../assets/images/icon-advanced.svg',
+      icon: 'assets/images/icon-advanced.svg',
       title: 'Advanced',
       price: '$12/mo',
       value: 12
     },
     {
-      icon: '../../../../../assets/images/icon-pro.svg',
+      icon: 'assets/images/icon-pro.svg',
       title: 'Pro',
       price: '$15/mo',
       value: 15
