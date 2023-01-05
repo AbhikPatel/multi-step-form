@@ -1,0 +1,22 @@
+.form-container{
+    width: 100%;
+}
+
+.duration-container{
+    background-color: #eff7ff;
+}
+
+#content{
+    @media(max-width: 992px){
+        position: absolute;
+        top: 200px;
+        right: 30px;
+        left: 30px;
+        bottom: 30px;
+        border-radius: 20px;
+    }
+}
+
+.wrapper{
+    background-color: $step-active-bg;
+}

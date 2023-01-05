@@ -1,0 +1,41 @@
+<!-- Start: User Info Page  -->
+<div class="form-container">
+
+    <!-- Form Title  -->
+    <div class="form-title">
+        <h1 class="text-primary"> Finishing up </h1>
+        <span class="sub-title"> Double-check everything looks OK before confirming. </span>
+    </div>
+
+    <div class="duration-container my-5 p-4 rounded-4">
+        <div class="d-flex justify-content-between align-items-center pb-4 border-bottom">
+            <div class="d-flex flex-column">
+                <span class="text-primary fw-semibold"> {{plan}} ({{duration ? 'Yearly' : 'Monthly'}}) </span>
+                <a routerLink="/two"> Change </a>
+            </div>  
+            <span class="text-primary fw-bolder fs-5"> {{payment}} </span>
+        </div>
+        <div class="pt-3 d-flex justify-content-between align-items-center" *ngIf="addson.online">
+            <span class="sub-title"> Online Service </span>
+            <span class="text-primary"> {{duration ? '$10/yr' : '$1/mo'}} </span>
+        </div>
+        <div class="pt-3 d-flex justify-content-between align-items-center" *ngIf="addson.storage">
+            <span class="sub-title"> Larger storage </span>
+            <span class="text-primary"> {{duration ? '$20/yr' : '$2/mo'}} </span>
+        </div>
+        <div class="pt-3 d-flex justify-content-between align-items-center" *ngIf="addson.profile">
+            <span class="sub-title"> Customize profile </span>
+            <span class="text-primary"> {{duration ? '$20/yr' : '$2/mo'}} </span>
+        </div>
+    </div>
+    <div class="d-flex justify-content-between align-items-center p-4">
+        <span class="sub-title"> Total (per {{duration ? 'year' : 'month'}}) </span>
+        <span class="text-secondary fs-3 fw-bold"> ${{total}}/{{duration ? 'yr' : 'mo'}} </span>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center pt-5">
+        <span class="text-muted fw-semibold" role="button" routerLink="/three"> Go back </span>
+        <button class="btn btn-secondary" routerLink="/final"> Submit </button>
+    </div>
+</div>
+<!-- End: User Info Page  -->

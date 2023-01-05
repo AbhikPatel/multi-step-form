@@ -1,0 +1,48 @@
+<!-- Start: User Info Page  -->
+<div class="form-container">
+
+    <!-- Form Title  -->
+    <div class="form-title">
+        <h1 class="text-primary"> Select your plan </h1>
+        <span class="sub-title"> You have the option of monthly and yearly billing. </span>
+    </div>
+
+    <!-- Form  -->
+    <form class="py-5" [formGroup]="planGroup" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-4" *ngFor="let data of planSubscribtion">
+                <label for="{{data.title}}" class="form-label w-100" role="button">
+                    <div class="plan-cards border rounded-3 p-3 p-lg-4 d-flex flex-column justify-content-between"
+                        [ngClass]="{'border-primary': planGroup.value.plan === data.value}">
+                        <figure>
+                            <img [src]="data.icon" alt="subscribtion">
+                        </figure>
+                        <div class="plan-container d-flex flex-column">
+                            <span class="text-primary fw-semibold"> {{data.title}} </span>
+                            <span class="sub-title"> {{data.price}} </span>
+                            <span class="text-primary" *ngIf="planSwitch"> 2 months free </span>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="plan" [id]="data.title" [value]="data.value" class="d-none"
+                    formControlName="plan">
+            </div>
+        </div>
+
+        <div class="duration-container d-flex justify-content-center align-items-center rounded-3 p-3 mt-5">
+            <span class="text-primary fw-bold"> Monthly </span>
+            <div class="position-relative switch-container rounded-pill mx-5 d-flex align-items-center px-2"
+                (click)="onSwitch()" role="button" [ngClass]="{'justify-content-end' : planSwitch}">
+                <span class="pointer rounded-circle"></span>
+            </div>
+            <span class="text-muted fw-bold"> Yearly </span>
+        </div>
+
+        <div class="d-flex justify-content-between pt-5">
+            <span class="text-muted fw-bold" role="button" (click)="onBack()"> Go Back </span>
+            <button class="btn btn-primary btn-sm" type="submit" [disabled]="!planGroup.valid"> Next Step </button>
+        </div>
+    </form>
+
+</div>
+<!-- End: User Info Page  -->

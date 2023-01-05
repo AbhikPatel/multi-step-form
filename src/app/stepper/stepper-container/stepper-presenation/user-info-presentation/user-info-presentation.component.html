@@ -1,0 +1,55 @@
+<!-- Start: User Info Page  -->
+<div class="form-container">
+
+    <form class="h-100" [formGroup]="infoGroup" (ngSubmit)="onSubmit()">
+        <!-- Form Title  -->
+        <div class="form-title">
+            <h1 class="text-primary"> Personal Info </h1>
+            <span class="sub-title"> Please provide your name, email address and phone number. </span>
+        </div>
+
+        <!-- Form  -->
+
+        <!-- Name Field  -->
+        <div class="">
+            <div class="d-flex justify-content-between">
+                <label for="fullName" class="form-label"> Name </label>
+                <span class="text-danger fw-bold" *ngIf="getControls['fullName']?.errors?.['required'] 
+                    && getControls['fullName'].touched"> This feild is required </span>
+            </div>
+            <input type="text" name="fullName" id="fullName" class="form-control"
+                [ngClass]="{'border-danger' : getControls['fullName'].invalid && getControls['fullName'].touched}"
+                formControlName="fullName" placeholder="eg. Stephen King">
+        </div>
+
+        <!-- Email Addess Feild  -->
+        <div class="">
+            <div class="d-flex justify-content-between">
+                <label for="mail" class="form-label"> Email Address </label>
+                <span class="text-danger fw-bold" *ngIf="getControls['mail']?.errors?.['required'] 
+                    && getControls['mail'].touched"> This feild is required </span>
+            </div>
+            <input type="email" name="mail" id="mail" class="form-control" formControlName="mail"
+                [ngClass]="{'border-danger' : getControls['mail'].invalid && getControls['mail'].touched}"
+                placeholder="eg. stephenking@loren.com">
+        </div>
+
+        <!-- Phone Number Field  -->
+        <div class="">
+            <div class="d-flex justify-content-between">
+                <label for="phone" class="form-label"> Phone Number </label>
+                <span class="text-danger fw-bold" *ngIf="getControls['phone']?.errors?.['required'] 
+                        && getControls['phone'].touched"> This feild is required </span>
+            </div>
+            <input type="number" name="phone" id="phone" class="form-control"
+                [ngClass]="{'border-danger' : getControls['phone'].invalid && getControls['phone'].touched}"
+                formControlName="phone" placeholder="eg. 9856324712">
+        </div>
+
+        <!-- Buttons Functionality  -->
+        <div class="py-5 d-flex justify-content-end">
+            <button class="btn btn-primary" type="submit"> Next Step </button>
+        </div>
+    </form>
+</div>
+<!-- End: User Info Page  -->

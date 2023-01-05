@@ -1,0 +1,31 @@
+<!-- Start: Wrapper Section  -->
+<div class="h-100 wrapper d-flex justify-content-center align-items-center overflow-auto">
+    <div class="stepper-container d-flex p-3 bg-white rounded-4">
+
+        <!-- Start: Sidebar Section  -->
+        <div id="sidebar" class="flex-column rounded-4">
+
+            <!-- Step Menu  -->
+            <ul class="menu d-flex flex-column justify-content-center p-4">
+                <li class="menu-items d-flex align-items-center py-3" *ngFor="let data of stepNav">
+                    <span class="menu-circle d-flex justify-content-center align-items-center 
+                        fw-semibold rounded-circle" [ngClass]="activeStep() === data.id ? 'step-active' : 'border border-white text-white'">
+                        {{data.id}}
+                    </span>
+                    <div class="d-flex flex-column justify-content-between ps-4">
+                        <span class="sub-title"> STEP {{data.id}} </span>
+                        <span class="menu-title fw-bold text-white"> {{data.title}} </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- End: Sidebar Section  -->
+
+        <!-- Start: Content Section -->
+        <div id="content" class="flex-grow-1 overflow-hidden d-flex justify-content-center align-items-center bg-white">
+            <router-outlet></router-outlet>
+        </div>
+        <!-- End: Content Section -->
+    </div>
+</div>
+<!-- End: Wrapper Section  -->
