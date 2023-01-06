@@ -1,18 +1,18 @@
 <!-- Start: Wrapper Section  -->
-<div class="h-100 wrapper d-flex justify-content-center align-items-center overflow-auto">
-    <div class="stepper-container d-flex p-3 bg-white rounded-4">
+<div class="h-100 wrapper d-md-flex justify-content-center align-items-center overflow-auto">
+    <div class="stepper-container d-flex flex-md-row flex-column p-md-3 bg-white position-relative rounded-4">
 
         <!-- Start: Sidebar Section  -->
-        <div id="sidebar" class="flex-column rounded-4">
+        <div id="sidebar" class="flex-column">
 
             <!-- Step Menu  -->
-            <ul class="menu d-flex flex-column justify-content-center p-4">
-                <li class="menu-items d-flex align-items-center py-3" *ngFor="let data of stepNav">
+            <ul class="menu d-flex flex-row flex-md-column justify-content-center p-4">
+                <li class="menu-items d-flex align-items-center py-3 m-md-0 mx-4" *ngFor="let data of stepNav">
                     <span class="menu-circle d-flex justify-content-center align-items-center 
                         fw-semibold rounded-circle" [ngClass]="activeStep() === data.id ? 'step-active' : 'border border-white text-white'">
                         {{data.id}}
                     </span>
-                    <div class="d-flex flex-column justify-content-between ps-4">
+                    <div class="d-md-flex d-none flex-column justify-content-between ps-4">
                         <span class="sub-title fs-7"> STEP {{data.id}} </span>
                         <span class="menu-title fw-bold text-white fs-7"> {{data.title}} </span>
                     </div>
@@ -22,7 +22,7 @@
         <!-- End: Sidebar Section  -->
 
         <!-- Start: Content Section -->
-        <div id="content" class="flex-grow-1 p-5 bg-white">
+        <div id="content" class="flex-grow-1 p-4 p-lg-5 bg-white">
             <router-outlet></router-outlet>
         </div>
         <!-- End: Content Section -->

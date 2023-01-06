@@ -41,7 +41,6 @@ export class SubscribtionPlanPresentationComponent implements OnInit {
 
 
       this.planGroup.patchValue(patchData)
-      console.log(this._mainService.finalData[1])
     }
 
     this._service.planData$.subscribe((data) => this._mainService.finalData[1] = data)

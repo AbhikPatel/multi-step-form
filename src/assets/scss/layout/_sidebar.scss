@@ -2,6 +2,11 @@
     flex: 0 0 $sidebar-width;
     background-image: url('~src/assets/images/bg-sidebar-desktop.svg');
     background-size: cover;
+    
+    @media (max-width:768px){
+        background-image: url('~src/assets/images/bg-sidebar-mobile.svg');
+        flex: 0 0 200px;
+    }
 
     .menu{
         &-circle{

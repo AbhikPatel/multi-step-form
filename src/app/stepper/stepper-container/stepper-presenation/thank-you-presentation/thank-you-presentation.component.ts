@@ -22,7 +22,6 @@ export class ThankYouPresentationComponent implements OnInit {
     let final = {};
     this.formData.forEach((items:any) => Object.assign(final, items))
     console.log(final);
-    
   }
 
 }

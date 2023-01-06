@@ -1,3 +1,7 @@
 .plan-cards{
-    height: 200px;
+    height: 250px;
+    
+    @media (max-width: 768px){
+        height: 200px;
+    }
 }

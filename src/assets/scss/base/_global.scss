@@ -24,6 +24,11 @@ input::-webkit-inner-spin-button {
 .stepper-container{
   height: 700px;
   width: 1000px;
+
+  @media (max-width:768px){
+    width: 100%;
+    height: auto;
+  }
 }
 
 .fs-7{

@@ -7,13 +7,17 @@
 }
 
 #content{
-    @media(max-width: 992px){
+    @media (max-width: 768px){
         position: absolute;
-        top: 200px;
+        border-radius: 20px;
         right: 30px;
         left: 30px;
-        bottom: 30px;
-        border-radius: 20px;
+        top: 100px;
+    }
+    
+    @media (max-width: 576px){
+        right: 10px;
+        left: 10px;
     }
 }
 

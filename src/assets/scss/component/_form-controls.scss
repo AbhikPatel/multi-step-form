@@ -7,7 +7,18 @@
 }
 
 #content{
+    @media (max-width: 768px){
+        position: absolute;
+        border-radius: 20px;
+        right: 30px;
+        left: 30px;
+        top: 100px;
+    }
     
+    @media (max-width: 576px){
+        right: 10px;
+        left: 10px;
+    }
 }
 
 .wrapper{
