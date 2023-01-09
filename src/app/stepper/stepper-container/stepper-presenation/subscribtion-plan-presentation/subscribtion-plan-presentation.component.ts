@@ -67,7 +67,7 @@ export class SubscribtionPlanPresentationComponent implements OnInit {
   }
 
   public onBack() {
-    this._route.navigateByUrl('/one')
+    this._route.navigateByUrl('/')
     this._service.getData(this.planGroup.value.plan, this.planSwitch)
   }
 }

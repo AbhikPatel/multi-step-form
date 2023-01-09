@@ -42,7 +42,7 @@ export class StepperPresenationComponent implements OnInit {
   ]
 
   public activeStep(){
-    if(this._route.url === '/one')
+    if(this._route.url === '/')
       return 1
     else if(this._route.url === '/two')
       return 2

@@ -12,7 +12,7 @@
         <!-- Form  -->
         <div class="my-3">
             <label for="online" class="d-flex align-items-center justify-content-between p-4 rounded-4 border"
-                role="button" [ngClass]="{'border-primary' : onsGroup.value.online}">
+                role="button" [ngClass]="{'border-primary active-bg' : onsGroup.value.online}">
                 <div class="d-flex align-items-center">
                     <input type="checkbox" name="online" id="online" value="online" class="form-check-input"
                         formControlName="online">
@@ -26,7 +26,7 @@
         </div>
         <div class="my-3">
             <label for="storage" class="d-flex align-items-center justify-content-between p-4 rounded-4 border"
-                role="button" [ngClass]="{'border-primary' : onsGroup.value.storage}">
+                role="button" [ngClass]="{'border-primary active-bg' : onsGroup.value.storage}">
                 <div class="d-flex align-items-center">
                     <input type="checkbox" name="storage" id="storage" value="storage" class="form-check-input"
                         formControlName="storage">
@@ -40,7 +40,7 @@
         </div>
         <div class="my-3">
             <label for="profile" class="d-flex align-items-center justify-content-between p-4 rounded-4 border"
-                role="button" [ngClass]="{'border-primary' : onsGroup.value.profile}">
+                role="button" [ngClass]="{'border-primary active-bg' : onsGroup.value.profile}">
                 <div class="d-flex align-items-center">
                     <input type="checkbox" name="profile" id="profile" value="profile" class="form-check-input"
                         formControlName="profile">

@@ -10,8 +10,7 @@ import { UserInfoPresentationComponent } from './stepper-container/stepper-prese
 const routes: Routes = [
   { path:'', component:StepperContainerComponent,
     children:[
-      { path:'', redirectTo:'one', pathMatch:'full'},
-      { path:'one', component:UserInfoPresentationComponent },
+      { path:'', component:UserInfoPresentationComponent },
       { path:'two', component:SubscribtionPlanPresentationComponent },
       { path:'three', component:AddOnsPresentationComponent },
       { path:'four', component:SummaryPresentationComponent },
